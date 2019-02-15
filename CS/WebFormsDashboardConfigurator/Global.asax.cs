@@ -27,7 +27,6 @@ namespace WebFormsDashboardConfigurator
 
             // Registers an Excel data source.
             DashboardExcelDataSource excelDataSource = new DashboardExcelDataSource("Excel Data Source");
-            excelDataSource.FileName = Server.MapPath("App_Data/Sales.xlsx");
             excelDataSource.SourceOptions = new ExcelSourceOptions(new ExcelWorksheetSettings("Sheet1"));
             dataSourceStorage.RegisterDataSource("excelDataSource", excelDataSource.SaveToXml());
 
@@ -40,6 +39,10 @@ namespace WebFormsDashboardConfigurator
                 olapParams.ConnectionString = "Provider=MSOLAP;Data Source=http://demos.devexpress.com/Services/OLAP/msmdpump.dll;"
                     + "Initial catalog=Adventure Works DW Standard Edition;Cube name=Adventure Works;Query Timeout=100;";
                 e.ConnectionParameters = olapParams;
+            }
+            if (e.DataSourceName == "Excel Data Source") {
+                ExcelDataSourceConnectionParameters excelParams = new ExcelDataSourceConnectionParameters(HttpContext.Current.Server.MapPath("App_Data/Sales.xlsx"));
+                e.ConnectionParameters = excelParams;
             }
         }
 
