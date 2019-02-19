@@ -1,8 +1,8 @@
 *Files to look at*:
 
-* [Default.aspx](./CS/WebFormsDashboardConfigurator/Default.aspx) (VB: [Default.aspx](./VB/WebFormsDashboardConfigurator/Default.aspx))
-* [Default.aspx.cs](./CS/WebFormsDashboardConfigurator/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/WebFormsDashboardConfigurator/Default.aspx.vb))
-* [Global.asax.cs](./CS/WebFormsDashboardConfigurator/Global.asax.cs) (VB: [Global.asax.vb](./VB/WebFormsDashboardConfigurator/Global.asax.vb))
+* [Default.aspx](./CS/WebFormsDashboardConfigurator/Default.aspx)
+* [Default.aspx.cs](./CS/WebFormsDashboardConfigurator/Default.aspx.cs)
+* [Global.asax.cs](./CS/WebFormsDashboardConfigurator/Global.asax.cs)
 
 # ASPxDashboard - How to set up a server part with DashboardConfigurator
 
