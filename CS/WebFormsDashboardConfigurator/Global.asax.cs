@@ -4,6 +4,7 @@ using DevExpress.DataAccess.ConnectionParameters;
 using DevExpress.DataAccess.Excel;
 using DevExpress.DataAccess.Web;
 using System;
+using System.Web;
 
 namespace WebFormsDashboardConfigurator
 {
