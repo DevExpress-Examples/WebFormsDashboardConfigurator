@@ -4,7 +4,7 @@
 * [Default.aspx.cs](./CS/WebFormsDashboardConfigurator/Default.aspx.cs)
 * [Global.asax.cs](./CS/WebFormsDashboardConfigurator/Global.asax.cs)
 
-# ASPxDashboard - How to set up a server part with DashboardConfigurator
+# ASPxDashboard - How to Set Up a Server Part with DashboardConfigurator
 
 This example demonstrates how to set up ASPxDashboard with the DashboardConfigurator settings.
 
