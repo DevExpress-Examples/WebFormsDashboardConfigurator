@@ -11,6 +11,7 @@ namespace WebFormsDashboardConfigurator
     public class Global : System.Web.HttpApplication {
 
         protected void Application_Start(object sender, EventArgs e) {
+            ASPxDashboard.StaticInitialize();
             DashboardConfigurator.Default.SetDashboardStorage(new DashboardFileStorage(Server.MapPath("App_Data/Dashboards")));
             DashboardConfigurator.Default.SetDataSourceStorage(CreateDataSourceStorage());
             DashboardConfigurator.Default.SetConnectionStringsProvider(new ConfigFileConnectionStringsProvider());
