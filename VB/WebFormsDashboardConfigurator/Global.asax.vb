@@ -11,6 +11,7 @@ Namespace WebFormsDashboardConfigurator
 		Inherits System.Web.HttpApplication
 
 		Protected Sub Application_Start(ByVal sender As Object, ByVal e As EventArgs)
+			ASPxDashboard.StaticInitialize()
 			DashboardConfigurator.Default.SetDashboardStorage(New DashboardFileStorage(Server.MapPath("App_Data/Dashboards")))
 			DashboardConfigurator.Default.SetDataSourceStorage(CreateDataSourceStorage())
 			DashboardConfigurator.Default.SetConnectionStringsProvider(New ConfigFileConnectionStringsProvider())
