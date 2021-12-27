@@ -2,7 +2,7 @@
 <Dashboard>
   <Title Text="New Dashboard" />
   <DataSources>
-    <ExcelDataSource Name="Excel Data Source" FileName="F:\projects\WebFormsDashboardConfigurator\WebFormsDashboardConfigurator\App_Data\Sales.xlsx" ComponentName="excelDataSource1">
+    <ExcelDataSource Name="Excel Data Source" FileName="Sales.xlsx" ComponentName="excelDataSource1" ConnectionName="xlsSales">
       <Options Type="DevExpress.DataAccess.Excel.ExcelSourceOptions" SkipEmptyRows="true" UseFirstRowAsHeader="true" SkipHiddenColumns="true" SkipHiddenRows="true">
         <ImportSettings Type="DevExpress.DataAccess.Excel.ExcelWorksheetSettings" WorksheetName="Sheet1" />
       </Options>
@@ -48,8 +48,8 @@
   </Items>
   <LayoutTree>
     <LayoutGroup>
-      <LayoutItem DashboardItem="treeViewDashboardItem1" Weight="0.27850162866449513" />
-      <LayoutItem DashboardItem="cardDashboardItem1" Weight="1.721498371335505" />
+      <LayoutItem DashboardItem="treeViewDashboardItem1" Weight="0.33475769074014972" />
+      <LayoutItem DashboardItem="cardDashboardItem1" Weight="1.6652423092598505" />
     </LayoutGroup>
   </LayoutTree>
 </Dashboard>

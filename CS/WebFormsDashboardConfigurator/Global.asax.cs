@@ -6,10 +6,8 @@ using DevExpress.DataAccess.Web;
 using System;
 using System.Web;
 
-namespace WebFormsDashboardConfigurator
-{
+namespace WebFormsDashboardConfigurator {
     public class Global : System.Web.HttpApplication {
-
         protected void Application_Start(object sender, EventArgs e) {
             ASPxDashboard.StaticInitialize();
             DashboardConfigurator.Default.SetDashboardStorage(new DashboardFileStorage(Server.MapPath("App_Data/Dashboards")));
@@ -18,8 +16,7 @@ namespace WebFormsDashboardConfigurator
             DashboardConfigurator.Default.ConfigureDataConnection += Default_ConfigureDataConnection;
         }
 
-        public DataSourceInMemoryStorage CreateDataSourceStorage()
-        {
+        public DataSourceInMemoryStorage CreateDataSourceStorage() {
             DataSourceInMemoryStorage dataSourceStorage = new DataSourceInMemoryStorage();
 
             // Registers an OLAP data source.
@@ -29,6 +26,7 @@ namespace WebFormsDashboardConfigurator
 
             // Registers an Excel data source.
             DashboardExcelDataSource excelDataSource = new DashboardExcelDataSource("Excel Data Source");
+            excelDataSource.ConnectionName = "xlsSales";
             excelDataSource.SourceOptions = new ExcelSourceOptions(new ExcelWorksheetSettings("Sheet1"));
             dataSourceStorage.RegisterDataSource("excelDataSource", excelDataSource.SaveToXml());
 
@@ -42,7 +40,7 @@ namespace WebFormsDashboardConfigurator
                     + "Initial catalog=Adventure Works DW Standard Edition;Cube name=Adventure Works;Query Timeout=100;";
                 e.ConnectionParameters = olapParams;
             }
-            if (e.DataSourceName == "Excel Data Source") {
+            if (e.ConnectionName == "xlsSales") {
                 ExcelDataSourceConnectionParameters excelParams = new ExcelDataSourceConnectionParameters(HttpContext.Current.Server.MapPath("App_Data/Sales.xlsx"));
                 e.ConnectionParameters = excelParams;
             }
