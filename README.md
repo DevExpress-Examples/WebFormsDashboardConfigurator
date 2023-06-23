@@ -11,7 +11,7 @@
 
 This example demonstrates how to set up ASPxDashboard with the DashboardConfigurator settings.
 
-## Files to Look At
+## Files to Review
 
 * [Default.aspx](./CS/WebFormsDashboardConfigurator/Default.aspx)
 * [Default.aspx.cs](./CS/WebFormsDashboardConfigurator/Default.aspx.cs)
