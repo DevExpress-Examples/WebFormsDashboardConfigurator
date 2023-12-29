@@ -5,9 +5,6 @@
 <!-- default badges end -->
 
 # Dashboard for Web Forms - How to Set Up a Server Part with DashboardConfigurator
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/170876401/)**
-<!-- run online end -->
 
 This example demonstrates how to set up ASPxDashboard with the DashboardConfigurator settings.
 
