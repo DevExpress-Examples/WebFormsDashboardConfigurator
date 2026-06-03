@@ -38,7 +38,7 @@ Namespace WebFormsDashboardConfigurator
 		Private Sub Default_ConfigureDataConnection(ByVal sender As Object, ByVal e As ConfigureDataConnectionWebEventArgs)
 			If e.ConnectionName = "olapConnection" Then
 				Dim olapParams As New OlapConnectionParameters()
-				olapParams.ConnectionString = "Provider=MSOLAP;Data Source=http://demos.devexpress.com/Services/OLAP/msmdpump.dll;" & "Initial catalog=Adventure Works DW Standard Edition;Cube name=Adventure Works;Query Timeout=100;"
+				olapParams.ConnectionString = "Provider=MSOLAP;Data Source=https://demos.devexpress.com/Services/OLAP/msmdpump.dll;" & "Initial catalog=Adventure Works DW Standard Edition;Cube name=Adventure Works;Query Timeout=100;"
 				e.ConnectionParameters = olapParams
 			End If
 			If e.ConnectionName = "xlsSales" Then
